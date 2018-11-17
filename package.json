@@ -1,6 +1,6 @@
 {
   "name": "gulp-rev-fakemanifest",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": false,
   "description": "gulp-rev workaround for fake manifest",
   "license": "MIT",
