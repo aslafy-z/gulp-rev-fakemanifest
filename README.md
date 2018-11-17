@@ -15,8 +15,10 @@ npm install gulp-rev-fakemanifest --save
 ```javascript
 const revFakeManifest = require('gulp-rev-fakemanifest');
 
-(...).pipe(revFakeManifest().pipe(...)
+(...).pipe(revFakeManifest(pth, opts).pipe(...)
 ```
+
+Options are the same as `gulp-rev-manifest`: https://github.com/lukeed/gulp-rev-manifest#revmanifestpath-options
 
 ### Example
 
@@ -26,8 +28,8 @@ return gulp.src('dist', { base: 'assets' })
   .pipe(isProd ? rev() : noop())
   .pipe(
     isProd
-    ? rev.manifest()
-    : revFakeManifest()
+    ? rev.manifest({ base: 'assets' })
+    : revFakeManifest({ base: 'assets' })
   )
   .pipe(gulp.dest('assets'));
 ```

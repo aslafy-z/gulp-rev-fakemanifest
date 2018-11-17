@@ -46,3 +46,5 @@ test.cb('rev file is valid', t => {
       t.end()
     }))
 })
+
+// TODO: empty manifest does not create a file
